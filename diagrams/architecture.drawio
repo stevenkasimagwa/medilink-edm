@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2026-10-07T00:00:00.000Z" agent="5.0" version="24.7.17">
+  <diagram id="medilink-architecture" name="Medilink Architecture">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="title" parent=""/>
+        <mxCell value="Medilink EDM Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" vertex="1" parent="title">
+          <mxGeometry x="260" y="20" width="360" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="source" value="Source Systems&#xa;EHR / Lab / Billing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="">
+          <mxGeometry x="40" y="130" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="raw" value="Raw Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="">
+          <mxGeometry x="260" y="130" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="curated" value="Curated Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="">
+          <mxGeometry x="480" y="130" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="warehouse" value="Warehouse &amp; Marts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="">
+          <mxGeometry x="700" y="130" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="analytics" value="Analytics &amp; Governance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="">
+          <mxGeometry x="450" y="300" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" parent="" source="source" target="raw" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" vertex="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" parent="" source="raw" target="curated" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" vertex="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" parent="" source="curated" target="warehouse" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" vertex="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" parent="" source="warehouse" target="analytics" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" vertex="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" parent="" source="curated" target="analytics" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" vertex="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
