@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS medilink CHARACTER SET utf8mb4;
+USE medilink;

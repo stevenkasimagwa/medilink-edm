@@ -191,6 +191,7 @@ ALTER TABLE stg_legacy_a
     ADD COLUMN dob_clean DATE;
 
 SET SQL_SAFE_UPDATES = 0;
+
 UPDATE stg_legacy_a
 SET name_clean = CONCAT(UPPER(SUBSTRING(TRIM(pname), 1, 1)), LOWER(SUBSTRING(TRIM(pname), 2)));
 
@@ -282,7 +283,7 @@ WHERE phone_norm IS NULL;
 -- PHASE 6: DATA WAREHOUSE & ETL
 -- ----------------------------------------------------------------------------
 CREATE TABLE dim_clinic (
-    clinic_sk INT AUTO_INCREMENT PRIMARY KEY,
+clinic_sk INT AUTO_INCREMENT PRIMARY KEY,
     clinic_id INT UNIQUE,
     clinic_code VARCHAR(10),
     clinic_name VARCHAR(100),
