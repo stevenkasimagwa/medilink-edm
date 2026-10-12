@@ -516,3 +516,4 @@ BEGIN
       AND visit_date < NOW() - INTERVAL 10 DAY;
 END //
 DELIMITER ;
+--END
